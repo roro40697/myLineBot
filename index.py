@@ -1,6 +1,4 @@
 from flask import Flask
-from flask_ngrok import run_with_ngrok
-
 
 app = Flask (__name__)
 run_with_ngrok(app)
@@ -9,9 +7,6 @@ run_with_ngrok(app)
 def index():
     return "Hello World"
 
-@app.route("/capoo")
-def index1():
-    return "Hello capoo"
 
 if __name__=="__main__":
     app.run()
